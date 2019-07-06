@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="columns has-padding-20 has-text-centered">
+  <div :class="[currentTheme == 'Dark'? 'has-background-black has-text-light' : '']">
+    <div class="columns is-mobile has-padding-20 has-text-centered">
       <div class="column">Hire</div>
       <div class="column">
         <i class="fas fa-angle-right"></i>
@@ -24,6 +24,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props:['currentTheme']
+}
+</script>
+
 <style lang="scss" scoped>
 .footer {
   position: fixed;
